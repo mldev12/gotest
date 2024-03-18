@@ -2,8 +2,8 @@
 
 echo "Let us pretend that this is building something ... and takes 20 seconds"
 
-apt update
-apt install python3
+sudo apt update
+sudo apt install python3
 python3 --version
 
 count=0
