@@ -1,6 +1,11 @@
 #!/bin/bash
 
 echo "Let us pretend that this is building something ... and takes 20 seconds"
+apk add --update --no-cache python3 && ln -sf python3 /usr/bin/python
+python3 -m ensurepip
+pip3 install --no-cache --upgrade pip setuptools
+
+python3 test.py
 
 count=0
 while [ "$count" -lt 20 ]; do
